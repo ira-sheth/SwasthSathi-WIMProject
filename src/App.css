@@ -1,0 +1,73 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Scroll Bar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background-color: #FFFFFF;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #1A8EFD;
+    border-radius: 4rem;
+}
+
+.leaflet-routing-geocoder-result{
+    cursor: pointer !important;
+    font-size: 18px !important;
+}
+
+.leaflet-control-geocoder-results {
+    background-color: #fff !important; 
+    border: 2px solid #3498db !important; 
+    border-top: none; 
+    border-radius: 0 0 4px 4px !important;
+    max-height: 200px !important; 
+    overflow-y: auto !important; 
+  }
+
+  .leaflet-routing-geocoder input{
+    width: 100% !important;
+    padding: 8px !important;
+    font-size: 16px !important;
+    border: 2px solid #0f89db !important; /* Blue border */
+    border-radius: 4px !important;
+    background-color: #fff !important; /* White background */
+    color: #333 !important; /* Dark text color */
+  }
+
+  .leaflet-routing-container h2{
+    color: #0f89db !important;
+  }
+
+  .leaflet-routing-container h3{
+    color: #035e9b !important;
+    font-weight: bold !important;
+    font-size: 16px !important;
+    margin-top: -20px !important;
+  }
+
+  .leaflet-routing-alt-minimized{
+    color: white !important;
+    height: 0px !important;
+  }
+
+  .leaflet-routing-geocoders button{
+    background-color:#0f89db !important;
+    font-size: 20px !important;
+    padding: 5px 10px 5px 10px !important;
+  }
+
+
+  
