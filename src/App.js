@@ -99,16 +99,12 @@ function App() {
             }
           />
 
-          <Route
+          {<Route
             path="/admin-profile"
             element={
-              adminState._id ? (
-                <AdminProfile adminState={adminState} />
-              ) : (
-                <Navigate to="/admin-login" />
-              )
+              <AdminProfile/>
             }
-          />
+          />}
 
           <Route path="*" element={<NotFound />} />
         </Routes>

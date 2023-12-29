@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "../Styles/AppointmentForm.css";
 import { ToastContainer, toast } from "react-toastify";
-import { app, database } from "../firebaseConfig";
+import { database } from "../firebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
 import Swal from "sweetalert2";
 import Select from "react-select";

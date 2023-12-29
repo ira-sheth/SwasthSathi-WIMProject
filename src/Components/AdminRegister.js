@@ -1,15 +1,19 @@
 import React, { useEffect, useState } from "react";
+import Swal from "sweetalert2";
 import registerstyle from "../Styles/Register.module.css";
 import axios from "axios";
+import {app} from "../firebaseConfig"
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 import { useNavigate, NavLink } from "react-router-dom";
 
 const AdminRegister = () => {
+  const auth = getAuth();
   const navigate = useNavigate();
 
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
-  const [user, setUserDetails] = useState({
+  const [admin, setAdminDetails] = useState({
     fname: "",
     lname: "",
     email: "",
@@ -19,8 +23,8 @@ const AdminRegister = () => {
 
   const changeHandler = (e) => {
     const { name, value } = e.target;
-    setUserDetails({
-      ...user,
+    setAdminDetails({
+      ...admin,
       [name]: value,
     });
   };
@@ -55,8 +59,26 @@ const AdminRegister = () => {
   };
   const signupHandler = (e) => {
     e.preventDefault();
-    setFormErrors(validateForm(user));
+    setFormErrors(validateForm(admin));
     setIsSubmit(true);
+    createUserWithEmailAndPassword(auth, admin.email, admin.password)
+    .then((adminCredential) => {
+    const admin = adminCredential.admin;
+    Swal.fire({
+      position: 'top-center',
+      icon: 'success',
+      title: 'User Registered Successfully',
+      showConfirmButton: false,
+      timer: 3500
+    })
+    navigate('/admin-login');
+    
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // ..
+  });
     // if (!formErrors) {
     //   setIsSubmit(true);
     // }
@@ -64,11 +86,11 @@ const AdminRegister = () => {
 
   useEffect(() => {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
-      console.log(user);
-      axios.post("", user).then((res) => {
-        alert(res.data.message);
-        navigate("/login", { replace: true });
-      });
+      console.log(admin);
+      // axios.post("", user).then((res) => {
+      //   alert(res.data.message);
+      //   navigate("/login", { replace: true });
+      // });
     }
   }, [formErrors]);
   return (
@@ -82,7 +104,7 @@ const AdminRegister = () => {
             id="fname"
             placeholder="First Name"
             onChange={changeHandler}
-            value={user.fname}
+            value={admin.fname}
           />
           <p className={registerstyle.error}>{formErrors.fname}</p>
           <input
@@ -91,7 +113,7 @@ const AdminRegister = () => {
             id="lname"
             placeholder="Last Name"
             onChange={changeHandler}
-            value={user.lname}
+            value={admin.lname}
           />
           <p className={registerstyle.error}>{formErrors.lname}</p>
           <input
@@ -100,7 +122,7 @@ const AdminRegister = () => {
             id="email"
             placeholder="Email"
             onChange={changeHandler}
-            value={user.email}
+            value={admin.email}
           />
           <p className={registerstyle.error}>{formErrors.lname}</p>
           <input
@@ -109,7 +131,7 @@ const AdminRegister = () => {
             id="workAdress"
             placeholder="Work Address"
             onChange={changeHandler}
-            value={user.email}
+            value={admin.email}
           />
 
           <p className={registerstyle.error}>{formErrors.email}</p>
@@ -119,7 +141,7 @@ const AdminRegister = () => {
             id="password"
             placeholder="Password"
             onChange={changeHandler}
-            value={user.password}
+            value={admin.password}
           />
           <p className={registerstyle.error}>{formErrors.password}</p>
           <input
@@ -128,7 +150,7 @@ const AdminRegister = () => {
             id="cpassword"
             placeholder="Confirm Password"
             onChange={changeHandler}
-            value={user.cpassword}
+            value={admin.cpassword}
           />
           <p className={registerstyle.error}>{formErrors.cpassword}</p>
           <button
