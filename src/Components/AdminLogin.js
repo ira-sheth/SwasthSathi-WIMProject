@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Swal from "sweetalert2";
 import loginstyle from "../Styles/Login.module.css";
-import axios from "axios";
-import {app} from "../firebaseConfig"
-import {getAuth, signInWithEmailAndPassword, signInWithPopup,GoogleAuthProvider} from "firebase/auth";
+// import axios from "axios";
+// import {app} from "../firebaseConfig"
+import {getAuth, signInWithEmailAndPassword} from "firebase/auth";
 import { useNavigate, NavLink } from "react-router-dom";
 
 const AdminLogin = ({ setUserState }) => {
   const auth = getAuth();
   const navigate = useNavigate();
-  const googleProvider= new GoogleAuthProvider();
 
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
