@@ -3,14 +3,15 @@ import { useState, useEffect } from "react";
 import AdminAppointmentTable from "./AdminAppoinmentTable";
 //import profilestyle from "../Styles/Profile.module.css";
 import { database } from "../firebaseConfig";
-import { collection, getDocs, doc, deleteDoc } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 //import Swal from 'sweetalert2';
 
 const AdminProfile = () => {
     const [appointments, setAppointments] = useState([]);
     
     const getAppointments = async () => {
-      const querySnapshot = await getDocs(collection(database, "patients"));
+      const q = query(collection(database, "patients"), where("DateSlot", "!=", ""));
+      const querySnapshot = await getDocs(q);
       const appointments = querySnapshot.docs.map(doc => ({id: doc.id, ...doc.data()}));
       setAppointments(appointments);
     } 
@@ -19,9 +20,11 @@ const AdminProfile = () => {
       getAppointments();
     }, []);
 
-  return (
+  return (  
     <div>
-      <h1>Admin Profile</h1>
+    <br />
+      <h1 className="legal-siteTitle">Appointment table</h1>
+      <br /><br />
       <AdminAppointmentTable 
       appointments={appointments} />
     </div>

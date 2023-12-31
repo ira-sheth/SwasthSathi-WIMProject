@@ -4,8 +4,7 @@ import React from 'react';
 const AdminAppointmentTable = ({ appointments }) => {
   return (
     <div>
-      <h2>Appointment Table</h2>
-      <table>
+      <table style={{backgroundColor : 'rgb(223, 239, 255)'}}>
         <thead>
           <tr>
             <th>Name of Patient</th>
