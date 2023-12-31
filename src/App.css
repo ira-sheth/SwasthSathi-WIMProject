@@ -76,6 +76,7 @@ html {
     width: 80%;
     margin: 0 10%;
     font-size: 1.5rem;
+    background: linear-gradient(to right, #ECF2FF, #FBFCFF);
   }
   
   thead th {

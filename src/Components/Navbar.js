@@ -63,14 +63,14 @@ function Navbar() {
             Doctors
           </Link>
         </li>
-        <li>
+        {/* <li>
           <a
             href="http://localhost:3000/SwasthSaathi/medicinedelivery"
             className="navbar-links"
           >
             Medicine
           </a>
-        </li>
+        </li> */}
 
         <li>
           {/* Dropdown for regular login */}
@@ -110,7 +110,7 @@ function Navbar() {
         </li>
       </ul>
 
-      <button
+      {/* <button
         className="navbar-btn"
         type="button"
         disabled={isButtonDisabled}
@@ -120,7 +120,7 @@ function Navbar() {
         <Link to="/chatroom" className="linkTo">
           Live Chat
         </Link>
-      </button>
+      </button> */}
 
       {/* Mobile */}
       <div className={`mobile-navbar ${nav ? "open-nav" : ""}`}>

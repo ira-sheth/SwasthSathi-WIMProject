@@ -45,7 +45,7 @@ function App() {
           <Route path="form-submit" element={<FormSubmit />} />
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/doctors" element={<Doctors />} />
-          <Route path="/chatroom" element={<Chatroom />} />
+          {/* <Route path="/chatroom" element={<Chatroom />} /> */}
           <Route path="/bookappointment" element={<Calendly />} />
           <Route path="/apitesting" element={<APItesting />} />
           <Route path="/emergencymap" element={<MainMap />} />
