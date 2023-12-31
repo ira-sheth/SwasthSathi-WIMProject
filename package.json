@@ -8,7 +8,7 @@
     "path": false,
     "os": false
   },
-  "homepage": "https://github.com/ira-sheth/SwasthSathi-WIMProject/tree/main",
+
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/react": "^2.8.1",
