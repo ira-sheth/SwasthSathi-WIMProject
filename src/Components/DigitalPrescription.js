@@ -11,7 +11,7 @@ function DigitalPrescription() {
   const [patientName, setPatientName] = useState('');
   const [patientData, setPatientData] = useState(null);
 
-  //yeh badhiya chal raha hai
+
 
   const fetchPatientData = async () => {
     const patientsCollection = collection(database, 'patients');
@@ -33,7 +33,7 @@ function DigitalPrescription() {
     }
   };
 
-  //error idhar hai, dhudhna padega
+  //error handling required 
   const generatePDF = async () => {
     if (patientData) {
       const doc = new jsPDF();

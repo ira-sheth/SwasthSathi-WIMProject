@@ -39,15 +39,16 @@ function Hero() {
         <div className="hero-section">
           <div className="text-section">
             <p className="text-headline" style={{alignItems:"center"}}>❤️ Prioritizing Your Health</p>
-            <h2 className="text-title" style={{marginLeft:"22vh"}}>
+            <div style={{alignItems:"center"}}>
+              <h2 className="text-title" style={{alignItems:"center"}}>
               Connect with a Doctor and Schedule Appointments
             </h2>
-            <p className="text-descritpion" style={{marginLeft:"24vh" }}>
+            <p className="text-descritpion" style={{marginLeft:"19vh" }}>
               Consult with healthcare professionals online, receive medical
               advice, prescriptions, refills, and medical notes quickly. Access
               on-demand healthcare services conveniently.
             </p>
-
+            </div>
             <button
               className="text-appointment-btn"
               type="button"
@@ -57,17 +58,17 @@ function Hero() {
             </button>
             <div className="text-stats" style={{marginLeft:"12vh"}}>
               <div className="text-stats-container">
-                <p>145k+</p>
+                <p>5k+</p>
                 <p>Receive Patients</p>
               </div>
 
               <div className="text-stats-container">
-                <p>50+</p>
+                <p>10+</p>
                 <p>Expert Doctors</p>
               </div>
 
               <div className="text-stats-container">
-                <p>10+</p>
+                <p>15+</p>
                 <p>Years of Experience</p>
               </div>
             </div>
