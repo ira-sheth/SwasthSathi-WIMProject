@@ -1,7 +1,8 @@
 // AppointmentTable.js
 import React from 'react';
 
-const AdminAppointmentTable = ({ appointments }) => {
+
+const AdminAppointmentTable = ({ appointments, handleDelete, handleEdit }) => {
   return (
     <div>
       <table style={{backgroundColor : 'rgb(223, 239, 255)'}}>
@@ -13,6 +14,8 @@ const AdminAppointmentTable = ({ appointments }) => {
             <th>Mode</th>
             <th>Date Slot</th>
             <th>Time Slot</th>
+            <th></th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -24,6 +27,22 @@ const AdminAppointmentTable = ({ appointments }) => {
               <td>{appointment.Mode}</td>
               <td>{appointment.DateSlot}</td>
               <td>{appointment.TimeSlot}</td>
+              <td className="text-right">
+                  <button
+                    onClick={() => handleEdit(appointment.id)}
+                    className="button muted-button"
+                  >
+                    Edit
+                  </button>
+                </td>
+              <td className="text-left">
+                  <button
+                    onClick={() => handleDelete(appointment.id)}
+                    className="button muted-button"
+                  >
+                    Delete
+                  </button>
+                </td>
             </tr>
            ))}
         </tbody>
