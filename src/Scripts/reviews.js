@@ -3,7 +3,7 @@ export const customerReviews = [
     name: "Amit Kumar",
     location: "Delhi, India",
     message:
-      "Health Plus transformed my healthcare experience! The online consultations were so convenient, and the doctors were knowledgeable and caring.",
+      "SwasthSaathi transformed my healthcare experience! The online consultations were so convenient, and the doctors were knowledgeable and caring.",
   },
   {
     name: "Priya Singh",
@@ -21,7 +21,7 @@ export const customerReviews = [
     name: "Sneha Patel",
     location: "Chennai, India",
     message:
-      "Health Plus is a game-changer! The emergency care saved me during a critical situation. Grateful for their quick and efficient support.",
+      "SwasthSaathi is a game-changer! The emergency care saved me during a critical situation. Grateful for their quick and efficient support.",
   },
   {
     name: "Neha Gupta",
@@ -33,25 +33,25 @@ export const customerReviews = [
     name: "Rahul Verma",
     location: "Hyderabad, India",
     message:
-      "Finally, a healthcare platform that puts patients first! The heart disease service provided comprehensive care and regular follow-ups. Thank you, Health Plus!",
+      "Finally, a healthcare platform that puts patients first! The heart disease service provided comprehensive care and regular follow-ups. Thank you, SwasthSaathi!",
   },
   {
     name: "Anjali Joshi",
     location: "Pune, India",
     message:
-      "I've been using Health Plus for a variety of health concerns, and each time, I received exceptional care. It's my go-to for all medical needs!",
+      "I've been using SwasthSaathi for a variety of health concerns, and each time, I received exceptional care. It's my go-to for all medical needs!",
   },
   {
     name: "Vikram Singh",
     location: "Jaipur, India",
     message:
-      "I highly recommend Health Plus for online consultations. It's convenient, secure, and the doctors are top-notch. Great job, team!",
+      "I highly recommend SwasthSaathi for online consultations. It's convenient, secure, and the doctors are top-notch. Great job, team!",
   },
   {
     name: "Ritu Sharma",
     location: "Ahmedabad, India",
     message:
-      "The convenience of accessing medical notes online was fantastic. Health Plus made managing my health records hassle-free! Best Healthcare services.",
+      "The convenience of accessing medical notes online was fantastic. SwasthSaathi made managing my health records hassle-free! Best Healthcare services.",
   },
   {
     name: "Sachin Kumar",

@@ -1,6 +1,7 @@
 import React from "react";
 import Hero from "../Components/Hero";
 import Info from "../Components/Info";
+import Events from "../Components/Events";
 import About from "../Components/About";
 import Reviews from "../Components/Reviews";
 import Footer from "../Components/Footer";
@@ -15,6 +16,7 @@ function Home() {
       <video src={BackgroundVideo} autoPlay loop muted className="video" />
       <Hero />
       <Info />
+      <Events />
       <About />
       {/* <BookAppointment /> */}
       <Reviews />
