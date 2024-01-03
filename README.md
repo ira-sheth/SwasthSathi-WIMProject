@@ -25,9 +25,11 @@ https://apimedic.com/apitest
 Calendly: For appointment date and slot booking
 		https://calendly.com
 Razorpay: For payment Gateway integration
+
 Jasper Reports: For generating Custom Reports
 
 Platform hosted: Vercel
+
 Link: https://swasthsaathi-6pew171rs-nidhis-projects-9e1b5180.vercel.app/
 
 
