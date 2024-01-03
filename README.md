@@ -12,16 +12,24 @@ Features:
 
 Group Members:
 Ira Sheth -211081066
+
 Nidhi Shah - 211081066
 
 Tech Stack:
 MERN Tech stack
+
 Instead of MongoDB we have used Firebase.
+
 Frontend - Javascript, ReactJS, NodeJS, ExpressJS, LeafletJS(Map)
+
 Backend - Firebase
+
 APIs used  - 
+
 APIMedic to fetch the list of symptoms mentioned in the form:
+
 https://apimedic.com/apitest
+
 Calendly: For appointment date and slot booking
 		https://calendly.com
 Razorpay: For payment Gateway integration
