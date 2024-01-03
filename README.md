@@ -11,11 +11,14 @@ Features:
 5. Emergency Map which gives the shortest distance between two points.
 
 Group Members:
+
 Ira Sheth -211081066
 
 Nidhi Shah - 211081066
 
+
 Tech Stack:
+
 MERN Tech stack
 
 Instead of MongoDB we have used Firebase.
@@ -35,6 +38,7 @@ Calendly: For appointment date and slot booking
 Razorpay: For payment Gateway integration
 
 Jasper Reports: For generating Custom Reports
+
 
 Platform hosted: Vercel
 
